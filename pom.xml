@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.4</version>
+        <relativePath/>
+    </parent>
+    <groupId>com.github.liqiang-1994</groupId>
+    <artifactId>fly-boot</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>fly-boot</name>
+    <description>fly-boot</description>
+    <packaging>pom</packaging>
+
+    <properties>
+        <java.version>21</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <project.testresult.directory>${project.build.directory}/test-results</project.testresult.directory>
+        <maven.build.timestamp.format>yyyyMMddHHmmss</maven.build.timestamp.format>
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <spring-boot.version>3.1.4</spring-boot.version>
+        <spring-cloud.version>2022.0.4</spring-cloud.version>
+        <nacos.version>0.2.12</nacos.version>
+        <nacos-discovery.version>2.2.10-RC1</nacos-discovery.version>
+<!--        <springfox.version>2.9.2</springfox.version>-->
+<!--        <redisson.version>3.17.4</redisson.version>-->
+<!--        <mybatis-plus.version>3.3.1.tmp</mybatis-plus.version>-->
+<!--        <sharding-sphere.version>4.1.0</sharding-sphere.version>-->
+<!--        <spring-security-jwt.version>1.1.1.RELEASE</spring-security-jwt.version>-->
+<!--        <spring-cloud-netflix.version>2.2.10.RELEASE</spring-cloud-netflix.version>-->
+
+    </properties>
+
+    <modules>
+        <module>fly-auth</module>
+        <module>fly-gateway</module>
+        <module>fly-gateway</module>
+        <module>fly-api/fly-api-system</module>
+    </modules>
+
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>aliyun</id>-->
+<!--            <name>aliyun Repository</name>-->
+<!--            <url>https://maven.aliyun.com/repository/public</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--        <repository>-->
+<!--            <id>mvnrepository</id>-->
+<!--            <name>mvnrepository</name>-->
+<!--            <url>http://www.mvnrepository.com/</url>-->
+<!--            <layout>default</layout>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--            <snapshots>-->
+<!--                <enabled>false</enabled>-->
+<!--            </snapshots>-->
+<!--        </repository>-->
+<!--    </repositories>-->
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${spring-cloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
+                <version>2.2.9.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba.cloud</groupId>
+                <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+                <version>2.2.9.RELEASE</version>
+            </dependency>
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus-boot-starter</artifactId>
+                <version>3.5.3.2</version>
+            </dependency>
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>5.8.18</version>
+            </dependency>
+            <dependency>
+                <groupId>org.flowable</groupId>
+                <artifactId>flowable-spring-boot-starter</artifactId>
+                <version>7.0.0</version>
+            </dependency>
+
+
+
+        </dependencies>
+    </dependencyManagement>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
