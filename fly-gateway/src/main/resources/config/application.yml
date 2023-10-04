@@ -5,6 +5,18 @@ server:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+  webjars:
+    prefix:
 security:
   ignore:
     whites:
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: openapi
+          uri: http://localhost:${server.port}
+          predicates:
+            - Path=/service/v3/api-docs/**
+          filters:
+            - RewritePath=/service/v3/api-docs/(?<path>.*), /$\{path}/v3/api-docs

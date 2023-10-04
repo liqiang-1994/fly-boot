@@ -17,6 +17,10 @@ public enum ProcessStatus {
      */
     COMPLETED("completed"),
     /**
+     * 已终止
+     */
+    TERMINATED("terminated"),
+    /**
      * 已取消
      */
     CANCELED("canceled");

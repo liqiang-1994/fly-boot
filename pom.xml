@@ -40,7 +40,7 @@
     <modules>
         <module>fly-auth</module>
         <module>fly-gateway</module>
-        <module>fly-gateway</module>
+        <module>fly-system</module>
         <module>fly-api/fly-api-system</module>
     </modules>
 

@@ -1,0 +1,18 @@
+server:
+  port: 8083
+spring:
+  application:
+    name: fly-boot-workflow
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://127.0.0.1:5432/fly_workflow
+    username: postgres
+    password: liqiang1!
+debug: true
+mybatis-plus:
+  mapper-locations: mapper/*.xml
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+
